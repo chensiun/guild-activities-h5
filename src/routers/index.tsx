@@ -7,8 +7,8 @@ const router = createHashRouter([
     element: createElement(lazy(() => import('@/pages/home'))),
   },
   {
-    path: '/marquee',
-    element: createElement(lazy(() => import('@/pages/marquee'))),
+    path: '/popular-guilds',
+    element: createElement(lazy(() => import('@/pages/popular-guilds'))),
   },
 ]);
 
