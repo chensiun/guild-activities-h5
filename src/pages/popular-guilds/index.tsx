@@ -6,9 +6,6 @@ import MediaController from '@/components/media-controller';
 
 import './style.less';
 
-import FarmLogo from '@/assets/logo.png';
-// import reactLogo from '@/assets/react.svg';
-
 export default function Home() {
   const [enterInviteModalVisible, setEnterInviteModalVisible] = useState(false);
   const res = useQuery({
@@ -25,14 +22,18 @@ export default function Home() {
 
   return (
     <div className='pageRoot'>
-      <div className='logo'>
-        <img src={FarmLogo} className='logoImg' />
-      </div>
-      <div className='eventRules'>Event Rules</div>
+      <div className='decoration logo'></div>
+      <div className='decoration eventRules'></div>
+      <div className='decoration boli'></div>
+      <div className='decoration bolizuoji'></div>
+      <div className='decoration avatar'></div>
+
       <div className='guildListWrapper'>
         <div className='guildList'>
           <div className='guildListTitle'>
-            <div className='title'>Popular Guilds</div>
+            <div className='wingLeft'></div>
+            <div className='title'></div>
+            <div className='wingRight'></div>
           </div>
           <div className='tbRow tbHeader'>
             <div className='leader'>Guild Leader</div>
@@ -58,9 +59,9 @@ export default function Home() {
         </div>
       </div>
       <div className='footer'>
-        <div className='btn codeToJoin' onClick={() => setEnterInviteModalVisible(true)}>Enter Code to Join</div>
-        <div className='btn shareLink'>Share Invite Link</div>
-        <div className='btn moreInfo'>More Info on Our Web</div>
+        <div className='btn codeToJoin' onClick={() => setEnterInviteModalVisible(true)}></div>
+        <div className='btn shareLink'></div>
+        <div className='btn moreInfo'></div>
       </div>
 
       <EnterInviteModal
