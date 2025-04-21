@@ -1,21 +1,13 @@
 import { useState } from 'react';
 import { useQuery } from '@tanstack/react-query';
+import { fetchData } from '@/api/index';
 import EnterInviteModal from '@/components/enter-invite-modal';
+import MediaController from '@/components/media-controller';
 
 import './style.less';
 
 import FarmLogo from '@/assets/logo.png';
 // import reactLogo from '@/assets/react.svg';
-
-// 模拟一个 API 调用函数
-async function fetchData() {
-  const response = await fetch('https://elysia-atom.douni.one/api/guild/?page=1&pageSize=10');
-  console.log(1122, response)
-  if (!response.ok) {
-    throw new Error('Network response was not ok');
-  }
-  return response.json();
-}
 
 export default function Home() {
   const [enterInviteModalVisible, setEnterInviteModalVisible] = useState(false);
@@ -75,6 +67,8 @@ export default function Home() {
         active={enterInviteModalVisible}
         onClose={() => setEnterInviteModalVisible(false)}
       />
+
+      <MediaController />
     </div>
   );
 }
